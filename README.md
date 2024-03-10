@@ -2,6 +2,7 @@
 [![Documentation Status](https://readthedocs.org/projects/cra/badge/?version=latest)](https://cra.readthedocs.io/en/latest/?badge=latest)
 [![License](https://img.shields.io/github/license/Shadow15510/cra?color=green)](https://github.com/Shadow15510/cra/blob/master/LICENSE)
 [![Build Status](https://github.com/Shadow15510/cra/actions/workflows/python-publish.yml/badge.svg)](https://github.com/Shadow15510/cra/actions/workflows/python-publish.yml)
+[![PyPi](https://img.shields.io/pypi/v/cra)](https://pypi.org/project/cra/)
 
 ## Description
 This small Python package allows to simply draw upper air sounding on a Skew-T diagramm using ``metpy`` library.
