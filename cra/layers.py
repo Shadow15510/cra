@@ -47,7 +47,7 @@ def get_layers(layer_size: int, nb_layers: int, *datas):
     nb_layers : int
         The numbers of layers you want.
     *datas
-        All the data on which you you wish to obtain the strongest gradients.
+        All the data on which you wish to obtain the strongest gradients.
 
     Returns
     -------

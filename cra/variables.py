@@ -73,7 +73,7 @@ class VariablesSet:
 
     def add_press(self, vardata: tuple):
         '''
-        Add pressure to ``variables``.
+        Adds pressure to ``variables``.
 
         Parameters
         ----------
@@ -99,7 +99,7 @@ class VariablesSet:
 
     def add_temp(self, vardata: tuple):
         '''
-        Add temperature to ``variables``.
+        Adds temperature to ``variables``.
 
         Parameters
         ----------
@@ -126,7 +126,7 @@ class VariablesSet:
 
     def add_dewpoint(self, vardata: tuple):
         '''
-        Add dewpoint to ``variables``.
+        Adds dewpoint to ``variables``.
 
         Parameters
         ----------
@@ -152,7 +152,7 @@ class VariablesSet:
 
     def add_windu(self, vardata: tuple):
         '''
-        Add east component of the wind to ``variables``.
+        Adds east component of the wind to ``variables``.
 
         Parameters
         ----------
@@ -179,7 +179,7 @@ class VariablesSet:
 
     def add_windv(self, vardata: tuple):
         '''
-        Add north component of the wind to ``variables``.
+        Adds north component of the wind to ``variables``.
 
         Parameters
         ----------
@@ -250,7 +250,8 @@ class VariablesSet:
         above this threshold. You can also request an ascending or descending profile for altitude
         sounding.
 
-        .. warn:: Applying a threshold will lock the ``VariablesSet`` instance.
+        .. warning::
+            Applying a threshold will lock the ``VariablesSet`` instance.
 
         Parameters
         ----------
