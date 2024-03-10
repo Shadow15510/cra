@@ -35,7 +35,6 @@ class AirSounding:
 
     Methods
     -------
-    .. automethod:: __init__
     .. automethod:: show
     .. automethod:: auto_layers
     """
@@ -131,7 +130,8 @@ class AirSounding:
 
         Parameters
         ----------
-        layers : tuple, optionnal (``()`` by default)
+        layers : tuple, optionnal
+            By default: ``()``.
             The layers to be represented on the Skew-T diagramm.
         """
         fig = plt.figure(figsize=(18, 10))
@@ -260,11 +260,14 @@ class AirSounding:
 
         Parameters
         ----------
-        layer_size : int, optionnal (automatic size by default)
+        layer_size : int, optionnal
+            By default: automatic size.
             The size of each layers in termes of indexes.
-        nb_layers : int, optionnal (``10`` by default)
+        nb_layers : int, optionnal
+            By default: ``10``.
             The maximum number of layers you want.
-        show : bool, optionnal (``False`` by default)
+        show : bool, optionnal
+            By default: ``False``.
             If set on ``True``, once the layers have been analyzed, it will plot the layers on the
             Skew-T diagramm.
         """

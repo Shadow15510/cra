@@ -45,7 +45,6 @@ class VariablesSet:
 
     Methods
     -------
-    .. automethod:: __init__
     .. automethod:: add_press
     .. automethod:: add_temp
     .. automethod:: add_dewpoint
@@ -56,7 +55,7 @@ class VariablesSet:
     """
 
     def __init__(self, filename: str, **kwargs):
-        """Constructor method"""
+        """Constructor method."""
         self.__data = pd.read_csv(filename, **kwargs)
         self.__data.dropna(inplace=True)
         self.__variables = {}
@@ -68,7 +67,7 @@ class VariablesSet:
 
         Parameters
         ----------
-        varname: str
+        varname : str
             The name of the requested variable.
         """
         return self.__variables[varname]
@@ -215,16 +214,16 @@ class VariablesSet:
         temperature : tuple
             This tuple must contains:
 
-                * the name of the temperature in ``data``;
+            * the name of the temperature in ``data``;
 
-                * the unit of the temperature in ``data`` (cf. ``metpy.units``).
+            * the unit of the temperature in ``data`` (cf. ``metpy.units``).
 
         relative_humidity : tuple
             This tuple must contains:
 
-                * the name of the relative humidity in ``data``;
+            * the name of the relative humidity in ``data``;
 
-                * the unit of the relative humidity in ``data`` (cf. ``metpy.units``).
+            * the unit of the relative humidity in ``data`` (cf. ``metpy.units``).
 
         Warns
         -----
@@ -259,7 +258,8 @@ class VariablesSet:
         ----------
         threshold : float
             The threshold to apply on pressure, all pressure above this value will be retain.
-        ascending : bool, optionnal (``True`` by default)
+        ascending : bool, optionnal
+            By default: ``True``.
             Indicates which profile you want to keep. If ``ascending`` is set on ``True`` it will
             keep the ascending profile, otherwise the descending profile.
 
