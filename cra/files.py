@@ -19,8 +19,8 @@ def open_ftr(filename: str, **kwargs):
     ----------
     filename : str
         The name of the ftr file to be read.
-    kwargs:
-        The keywords argument to be given to ``pandas.read_csv``.
+    kwargs
+        The keyword arguments to be given to ``pandas.read_csv``.
 
     Returns
     -------
@@ -44,8 +44,8 @@ def open_cor(filename: str, **kwargs):
     ----------
     filename : str
         The name of the cor file to be read.
-    kwargs:
-        The keywords argument to be given to ``pandas.read_csv``.
+    kwargs
+        The keyword arguments to be given to ``pandas.read_csv``.
 
     Returns
     -------
