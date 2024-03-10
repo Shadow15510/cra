@@ -1,7 +1,4 @@
-'''
-CRA
-===
-
+"""
 Description
 -----------
 This small Python package allows to simply draw upper air sounding on a Skew-T diagramm using
@@ -16,5 +13,6 @@ Links
 -----
 * Home page: https://github.com/Shadow15510/cra
 * Documentation: http://cra.rtfd.io/
-'''
-__version__ = '1.1.0'
+"""
+
+__version__ = "1.1.1"
