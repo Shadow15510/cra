@@ -115,15 +115,15 @@ class AirSounding:
                     (pt_end - pt_start) > 0,
                     (wbpt_end - wbpt_start) > 0,
                     (self.data['temp'][index].magnitude
-                            - self.data['dewpoint'][index].magnitude) < 0.2,
+                        - self.data['dewpoint'][index].magnitude) < 0.2,
                     (self.data['temp'][index + 1].magnitude
-                            - self.data['dewpoint'][index + 1].magnitude) < 0.2
+                        - self.data['dewpoint'][index + 1].magnitude) < 0.2
                 )
 
     def show(self, layers: tuple=()):
         '''
         Plots and displays the upper air sounding on a Skew-T diagramm and a hodograph.
-        
+
         Parameters
         ----------
         layers : tuple, optionnal (``()`` by default)
@@ -194,10 +194,28 @@ class AirSounding:
         plt.xticks(np.arange(0, 0, 1))
         plt.yticks(np.arange(0, 0, 1))
         for i in range(10, 120, 10):
-            hodo.ax.annotate(str(i), (i, 0), xytext=(0, 2), textcoords='offset pixels',
-                          clip_on=True, fontsize=10, weight='bold', alpha=0.3, zorder=0)
-            hodo.ax.annotate(str(i), (0, i), xytext=(0, 2), textcoords='offset pixels',
-                          clip_on=True, fontsize=10, weight='bold', alpha=0.3, zorder=0)
+            hodo.ax.annotate(
+                    str(i),
+                    (i, 0),
+                    xytext=(0, 2),
+                    textcoords='offset pixels',
+                    clip_on=True,
+                    fontsize=10,
+                    weight='bold',
+                    alpha=0.3,
+                    zorder=0
+                )
+            hodo.ax.annotate(
+                    str(i),
+                    (0, i),
+                    xytext=(0, 2),
+                    textcoords='offset pixels',
+                    clip_on=True,
+                    fontsize=10,
+                    weight='bold',
+                    alpha=0.3,
+                    zorder=0
+                )
 
         # hodo.ax.set_xlabel(r'Vitesse (Est, m$\cdot$s$^{-1}$)')
         # hodo.ax.set_ylabel(r'Vitesse (Nord, m$\cdot$s$^{-1}$)')

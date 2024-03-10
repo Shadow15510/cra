@@ -62,8 +62,8 @@ class VariablesSet:
 
     def __getitem__(self, varname: str):
         '''
-        Returns the called variable
-        
+        Returns the called variable.
+
         Parameters
         ----------
         varname: str
@@ -279,7 +279,7 @@ class VariablesSet:
             else:
                 threshold = threshold[1]
                 for var in self.__variables:
-                    self.__variables[var] = np.flip(self.__variables[var][threshold: ])
+                    self.__variables[var] = np.flip(self.__variables[var][threshold:])
 
         else:
             warn(

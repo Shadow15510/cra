@@ -9,6 +9,7 @@ Functions
 '''
 import numpy as np
 
+
 def check_indices_spacing(indices: list, index_to_check: int, min_dist: int):
     '''
     Checks that the index to be checked is far enough away from all the others.
