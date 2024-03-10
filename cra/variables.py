@@ -152,16 +152,16 @@ class VariablesSet:
 
     def add_windu(self, vardata: tuple):
         '''
-        Adds east component of the wind to ``variables``.
+        Adds east wind component to ``variables``.
 
         Parameters
         ----------
         vardata : tuple
             This tuple must contains:
 
-            * the name of the east component of the wind in ``data``;
+            * the name of the east wind component in ``data``;
 
-            * the unit of the east component of the wind in ``data`` (cf. ``metpy.units``).
+            * the unit of the east wind component in ``data`` (cf. ``metpy.units``).
 
         Warns
         -----
@@ -179,16 +179,16 @@ class VariablesSet:
 
     def add_windv(self, vardata: tuple):
         '''
-        Adds north component of the wind to ``variables``.
+        Adds north wind component to ``variables``.
 
         Parameters
         ----------
         vardata : tuple
             This tuple must contains:
 
-            * the name of the north component of the wind in ``data``;
+            * the name of the north wind component in ``data``;
 
-            * the unit of the north component of the wind in ``data`` (cf. ``metpy.units``).
+            * the unit of the north wind component in ``data`` (cf. ``metpy.units``).
 
         Warns
         -----

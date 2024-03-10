@@ -4,7 +4,7 @@ gradients into the input signal.
 
 Functions
 ---------
-.. autofunction:: chech_indices_spacing
+.. autofunction:: check_indices_spacing
 .. autofunction:: get_layers
 '''
 import numpy as np
@@ -46,7 +46,7 @@ def get_layers(layer_size: int, nb_layers: int, *datas):
         small layers of this size, and the sliding gradients will be computed on these layers.
     nb_layers : int
         The numbers of layers you want.
-    *datas
+    datas
         All the data on which you wish to obtain the strongest gradients.
 
     Returns
