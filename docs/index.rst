@@ -1,5 +1,5 @@
 CRA Documentation
-=================
+#################
 
 Description
 -----------
@@ -17,11 +17,8 @@ Content
 -------
 .. toctree::
 	Home <self>
-	Basic use <tuto>
-	Air Sounding <air_souding>
-	Variables <variables>
-	Layers <layers>
-	ftr and cor files <ftr_cor>
+	Basic use <basic_use>
+	Reference guide <reference_guide>
 
 
 
