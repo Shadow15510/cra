@@ -1,4 +1,4 @@
-'''
+"""
 This module provides functions for dividing a signal into layers by analyzing the strongest
 gradients into the input signal.
 
@@ -6,12 +6,13 @@ Functions
 ---------
 .. autofunction:: check_indices_spacing
 .. autofunction:: get_layers
-'''
+"""
+
 import numpy as np
 
 
 def check_indices_spacing(indices: list, index_to_check: int, min_dist: int):
-    '''
+    """
     Checks that the index to be checked is far enough away from all the others.
 
     Parameters
@@ -28,7 +29,7 @@ def check_indices_spacing(indices: list, index_to_check: int, min_dist: int):
     out : bool
         It equals ``True`` if ``index_to_check`` is far enough away from all the others, and
         ``False`` in the other case.
-    '''
+    """
     for i in indices:
         if abs(index_to_check - i) <= min_dist:
             return False
@@ -36,7 +37,7 @@ def check_indices_spacing(indices: list, index_to_check: int, min_dist: int):
 
 
 def get_layers(layer_size: int, nb_layers: int, *datas):
-    '''
+    """
     Extracts strongest gradients from input data. If you give several input datas, the result will
     be the concatenation of all the gradients found.
 
@@ -62,7 +63,7 @@ def get_layers(layer_size: int, nb_layers: int, *datas):
     and you want 10 layers::
 
         layers_indices = get_layers(10, 10, data_temp, data_relative_hum)
-    '''
+    """
     final_indices = set()
     nb_layers //= len(datas)
 
@@ -71,10 +72,7 @@ def get_layers(layer_size: int, nb_layers: int, *datas):
         gradients = []
         for i in range(nb_data - layer_size):
             grads = np.abs(np.gradient(data[i: i + layer_size]))
-            gradients.append((
-                    i,
-                    sum(grads) / layer_size
-                ))
+            gradients.append((i, sum(grads) / layer_size))
 
         indices = [0]
         while len(indices) < nb_layers and gradients:
