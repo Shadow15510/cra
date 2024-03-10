@@ -11,7 +11,7 @@ This package is `available on PyPi <https://pypi.org/project/cra/>`_: ``pip inst
 
 License
 -------
-All this project is under GNU General Public License v3.0+ (GPLv3+). Please see `LICENSE <https://github.com/Shadow15510/cra/blob/master/LICENSE>`_ for further informations.
+All this project is under GNU General Public License v3.0+ (GPLv3+). Please see `LICENSE <https://github.com/Shadow15510/cra/blob/master/LICENSE>`_ for further information.
 
 Content
 -------
