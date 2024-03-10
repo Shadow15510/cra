@@ -40,4 +40,4 @@ dependencies = {file = ["requirements.txt"]}
 
 [project.urls]
 Homepage = "https://github.com/Shadow15510/cra"
-Documentation = ""
+Documentation = "https://cra.readthedocs.io/en/latest/"
