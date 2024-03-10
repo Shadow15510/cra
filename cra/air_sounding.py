@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 import metpy.calc as mpcalc
 from metpy.units import units
 from metpy.plots import SkewT, Hodograph
-from layers import get_layers
+from cra.layers import get_layers
 from cra.variables import VariablesSet
 
 
