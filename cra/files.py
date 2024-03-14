@@ -54,8 +54,8 @@ def open_cor(filename: str, **kwargs):
     """
     v_set = VariablesSet(filename, **kwargs)
     v_set.add_press(("Press", units.hPa))
-    v_set.add_temp(("TaCal", units.degC))
-    v_set.compute_dewpoint(("TaCal", units.degC), ("UCal", units.percent))
+    v_set.add_temp(("TaRad", units.degC))
+    v_set.compute_dewpoint(("TaRad", units.degC), ("UCal", units.percent))
     v_set.add_windu(("VE", units("m/s")))
     v_set.add_windv(("VN", units("m/s")))
     return v_set
