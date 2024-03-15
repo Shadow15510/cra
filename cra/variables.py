@@ -245,7 +245,7 @@ class VariablesSet:
                 LockedWarning,
             )
 
-    def apply_threshold(self, threshold: float, ascending: bool = True):
+    def apply_threshold(self, threshold: float, ascending: bool = True, start_cut: bool = False):
         """
         This function cuts data by applying a threshold to the pressure. It will retain all data
         above this threshold. You can also request an ascending or descending profile for altitude
@@ -262,6 +262,9 @@ class VariablesSet:
             By default: ``True``.
             Indicates which profile you want to keep. If ``ascending`` is set on ``True`` it will
             keep the ascending profile, otherwise the descending profile.
+        start_cut : bool, optionnal
+            By default: ``False``
+            If set on ``True`` it will cuts the data at the start.
 
         Warns
         -----
@@ -271,13 +274,19 @@ class VariablesSet:
         """
         if not self.__locked:
             threshold = np.where(
-                np.isclose(self.__variables["press"].magnitude, threshold)
+                np.isclose(self.__variables["press"].magnitude, threshold, atol=10)
             )[0]
+
+            if not start_cut:
+                self.__locked = True
 
             if ascending:
                 threshold = threshold[0]
                 for var in self.__variables:
-                    self.__variables[var] = self.__variables[var][:threshold]
+                    if start_cut:
+                        self.__variables[var] = self.__variables[var][threshold: ]
+                    else:
+                        self.__variables[var] = self.__variables[var][:threshold]
             else:
                 threshold = threshold[1]
                 for var in self.__variables:
