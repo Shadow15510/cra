@@ -15,4 +15,4 @@ Links
 * Documentation: http://cra.rtfd.io/
 """
 
-__version__ = "1.1.3"
+__version__ = "1.1.4"
